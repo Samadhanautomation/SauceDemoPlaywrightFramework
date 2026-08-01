@@ -13,5 +13,5 @@ test('Login with valid user', async ({ loginPage }) => {
    //await loginPage.waitForTimeout(5000);
 
    await loginPage.timeout();  /// FIX: Call the timeout method to wait for 5 seconds
-
+  await console.log('Samadhan');
 });
