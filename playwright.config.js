@@ -7,7 +7,7 @@ export default defineConfig({
   testDir: './tests',
   retries: 0,
   use: {
-    channel: 'msedge',
+   // channel: 'msedge',
     baseURL: 'https://www.saucedemo.com/',
     headless: true,
     screenshot: 'on',
