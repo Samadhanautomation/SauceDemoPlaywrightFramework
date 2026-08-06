@@ -9,25 +9,17 @@ export default defineConfig({
   use: {
     channel: 'msedge',
     baseURL: 'https://www.saucedemo.com/',
-    headless: false,
+    headless: true,
     screenshot: 'on',
     video: 'retain-on-failure'
   },
  
    projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-  ],
+  { name: 'chromium', use: { browserName: 'chromium' } },   // default Chromium
+  { name: 'firefox', use: { browserName: 'firefox' } },     // no channel
+  { name: 'webkit', use: { browserName: 'webkit' } }        // no channel
+],
+
 
   reporter: [['list'], ['./configure/reporterConfig.js']]
 });
